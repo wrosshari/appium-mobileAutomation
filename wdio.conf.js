@@ -53,17 +53,15 @@ exports.config = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-        platformName                : "Android",
-        "appium:automationName"     : "UiAutomator2",
-        "appium:deviceName"         : "Pixel 2 API 30",
-        "appium:platformVersion"    : "11.0",
-        "appium:appPackage"         : "com.fgilmany.dietmealapp",
-        "appium:appActivity"        : "com.fghilmany.dietmealapp.ui.main.MainActivity",
-        "appium:udid"               : "emualtor-5554",
-        "appium:noReset"            : true,
-        "appium:forceAppLaunch"     : true,
-        "appium:app"                : path.join(process.cwd(),'.test/apk/Diet_meal.apk')
-    }],
+        "platformName": "Android",
+        "appium:udid": "emulator-5554",
+        "appium:deviceName": "Pixel 2 API 30",
+        "appium:appPackage": "com.fghilmany.dietmealapp",
+        "appium:appActivity": "com.fghilmany.dietmealapp.ui.main.MainActivity",
+        "appium:noReset": true,
+        "appium:forceAppLaunch": true,
+        "appium:app": "C:\\Users\\Lenovo\\OneDrive\\Documents\\GIT\\appium-mobileAutomation\\test\\apk\\Diet_meal.apk"
+      }],
     //
     // ===================
     // Test Configurations
@@ -116,7 +114,7 @@ exports.config = {
             'appium',
             {
                 args : {
-                    address : '127.0.0.1',
+                    address : 'localhost',
                     port    : 4723,
                 },
                 logPath : './log',
